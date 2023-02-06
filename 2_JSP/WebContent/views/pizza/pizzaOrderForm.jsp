@@ -53,7 +53,7 @@
                  <th>피자</th>
                  <td>
                     <select name="pizza">
-                       <option>콤비네이션피자</option>
+                       <option>콤비네이션피자</option> <!-- <option value="">가 생략되었으므로 value는 자동으로 option 태그 안에 있는 "콤비네이션피자"가 된다. // 콤비네이션피자가 맨 위에 있으므로 기본 선택됨. -->
                        <option>치즈피자</option>
                        <option>포테이토피자</option>
                        <option>고구마피자</option>
