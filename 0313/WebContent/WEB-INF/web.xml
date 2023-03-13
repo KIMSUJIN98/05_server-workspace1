@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>0313</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 서블릿등록 -->
+  <servlet>
+  <servlet-name>Test</servlet-name>
+  <servlet-class>com.kh.test.Test</servlet-class> 		<!-- 어떤 경로에 있는 파일인지? <servlet-class>패키지.클래스이름</servlet-class> -->
+  </servlet>
+  
+  <servlet-mapping> 									<!-- 파일 path 지정? localhost:8888/test(컨텍스트패스) -->
+  <servlet-name>Test</servlet-name>
+  <url-pattern>*.do</url-pattern>						<!-- 1) *.do : 파일경로를 따라 해당 형식에 해당되는 것을 자동으로 연결 -->     <!-- 2) /test -->
+  </servlet-mapping>
+  
+  														<!-- 1) http://localhost:8888/0313/Test.do 연결하여 확인 -->       <!-- 2) http://localhost:8888/0313/test 연결하여 확인 -->
+</web-app>
